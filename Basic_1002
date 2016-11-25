@@ -58,9 +58,7 @@ public class Main {
 			if (j != textInput.length - 1){
 				System.out.print(" ");
 			}
-			
 		}
-		
 
 	}
 
