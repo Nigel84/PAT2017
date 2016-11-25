@@ -1,0 +1,65 @@
+
+import java.util.Scanner;
+import java.math.BigDecimal;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		BigDecimal number = in.nextBigDecimal();
+		String text = String.valueOf(number);
+		in.close();
+		
+		char[] textASC = text.toCharArray();
+		int sum = 0;
+		
+		for(int i=0; i<text.length(); i++){
+			int value = Character.getNumericValue(textASC[i]);
+			sum += value;
+			
+		}
+		
+		char[] textInput = String.valueOf(sum).toCharArray();
+		
+		for (int j=0; j<=textInput.length - 1; j++){
+			
+			switch (textInput[j]){
+			case '0': System.out.print("ling");
+			break;
+			
+			case '1': System.out.print("yi");
+			break;
+			
+			case '2': System.out.print("er");
+			break;
+			
+			case '3': System.out.print("san");
+			break;
+			
+			case '4': System.out.print("si");
+			break;
+			
+			case '5': System.out.print("wu");
+			break;
+			
+			case '6': System.out.print("liu");
+			break;
+			
+			case '7': System.out.print("qi");
+			break;
+			
+			case '8': System.out.print("ba");
+			break;
+			
+			case '9': System.out.print("jiu");
+			break;
+			}
+			
+			if (j != textInput.length - 1){
+				System.out.print(" ");
+			}
+		}
+
+	}
+
+}
